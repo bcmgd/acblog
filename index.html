@@ -125,6 +125,7 @@
   (function () {
     var slides = document.querySelectorAll('.cover-slider .cover-slide');
     if (slides.length > 1) {
+      slides.forEach(function (s) { var pre = new Image(); pre.src = s.getAttribute('src'); });
       var idx = 0;
       setInterval(function () {
         slides[idx].classList.remove('active');
